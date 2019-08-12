@@ -1,1 +1,74 @@
-// Specific CSS for your home-page
+.card-product {
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  margin: 20px 30px 20px 30px
+}
+
+.card-product h1 {
+  font-size: 40px;
+  width: 100px;
+  text-align: center;
+  object-fit: cover;
+}
+
+.card-product a {
+  font-size: 25px;
+  width: 100%;
+  text-align: center;
+  padding: 10%;
+  color: #82112A;
+}
+
+.card-product h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-product h3 {
+  font-size: 16px;
+  margin: 0;
+  padding-top: 5px;
+}
+
+.card-product p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+// .card-product .card-product-infos {
+//   padding: 0px;
+// }
+
+.card-category {
+  background-color: #82112A;
+  background-position: center;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.button {
+  background-color: #82112A; /* Green */
+  border: 1px;
+  color: white;
+  padding: 5px 5px 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+}

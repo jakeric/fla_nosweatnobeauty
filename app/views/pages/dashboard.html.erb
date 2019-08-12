@@ -1,0 +1,38 @@
+
+<div class="card-category">
+  <h1>RANKING</h1>
+</div>
+
+<% x = 0 %>
+<% @actionranking.each do |employee| %>
+<% x += 1 %>
+<div class="card-product">
+  <h1> <%= "##{x}" %> </h1>
+  <div class="card-product-infos">
+    <h2> # <%= x %> <%= employee["name"] %>  </h2>
+    <h3><%= "Punkte: #{employee["totalpoints"]}" %></h3>
+  </div>
+</div>
+<% end %>
+
+<br>
+<br>
+<br>
+
+<div class="card-category">
+  <h1>DEPARTMENT<br>RANKING</h1>
+</div>
+
+<% y = 0 %>
+
+<% @departmentranking.each do |department| %>
+<% y += 1 %>
+<div class="card-product">
+  <h1> <%= "##{y}" %> </h1>
+  <div class="card-product-infos">
+    <h2> <%= department["department"] %>  </h2>
+    <h3><%= "Punkte: #{department["totalpoints"]}" %></h3>
+  </div>
+</div>
+<% end %>
+

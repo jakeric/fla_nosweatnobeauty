@@ -1,0 +1,30 @@
+
+
+<div class="wrapper">
+
+  <div class="container container-boxes">
+        <div class="row">
+          <div class="col-xs-12 col-md-6 left-form-container">
+            <h2> Create a new sport </h2>
+
+            <div class="row">
+              <div class="col-md-12">
+                <%= simple_form_for @sport do |f| %>
+                <%= f.input :sportname, label: 'Sportart' %>
+              </div>
+
+
+              <div class="col-md-6 col-xs-12">
+                <%= f.input :pointsperaction, label: 'How many points per session?' %>
+              </div>
+              <div><%= f.button :submit %></div>
+              <% end %>
+
+            </div>
+          </div>
+
+
+      </div>
+
+  </div>
+</div>
