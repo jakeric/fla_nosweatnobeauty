@@ -2,7 +2,7 @@ class ActionsController < ApplicationController
   def new
     @action = Action.new
     @sports = Sport.pluck(:sportname)
-    @employees = Employee.pluck(:name)
+    @employees = Employee.pluck(:employeename)
     respond_to do |format|
       format.js
       format.html
@@ -16,7 +16,7 @@ class ActionsController < ApplicationController
     @action.sport = @sport
 
     @action.user = current_user
-    @employee = Employee.where("name = ?", params[:employee])
+    @employee = Employee.where("employeename = ?", params[:employeename])
 
 
     if @action.save
@@ -34,7 +34,7 @@ class ActionsController < ApplicationController
   end
 
   def ranking
-    sql = "SELECT e.id, e.name, sum(s.pointsperaction) as totalpoints FROM actions a left join sports s on s.id=a.sport_id left join employees e on e.id=a.employee_id group by e.id, e.name ORDER BY totalpoints desc"
+    sql = "SELECT e.id, e.employeename, sum(s.pointsperaction) as totalpoints FROM actions a left join sports s on s.id=a.sport_id left join employees e on e.id=a.employee_id group by e.id, e.employeename ORDER BY totalpoints desc"
     @actionranking = ActiveRecord::Base.connection.execute(sql)
 
     sql_dep = "SELECT e.department, sum(s.pointsperaction) as totalpoints FROM actions a left join sports s on s.id=a.sport_id left join employees e on e.id=a.employee_id group by e.department ORDER BY totalpoints desc"

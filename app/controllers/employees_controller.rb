@@ -5,7 +5,7 @@ class EmployeesController < ApplicationController
   end
 
   def create
-    if Employee.where("name = ?", employee_params[:name]) == []
+    if Employee.where("employeename = ?", employee_params[:employeename]) == []
       @employee = Employee.new(employee_params)
       @employee.save
       redirect_to pages_about_path
@@ -17,6 +17,6 @@ class EmployeesController < ApplicationController
   private
 
   def employee_params
-    params.require(:employee).permit(:name, :department)
+    params.require(:employee).permit(:employeename, :department)
   end
 end

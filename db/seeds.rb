@@ -28,15 +28,15 @@ Sport.create(sportname: "Spinning", pointsperaction: 3)
 
 puts "6x sports created"
 
-Employee.create(name: "Martin Nguyen", department: "Business Intelligence")
-Employee.create(name: "Anjuli Hesse", department: "HR")
-Employee.create(name: "Bianca Frost", department: "Business Intelligence")
-Employee.create(name: "Helge Petersen", department: "Ops Ex")
-Employee.create(name: "Steffen Christ", department: "C-Level")
-Employee.create(name: "Lea Krumland", department: "HR")
-Employee.create(name: "Sebastian Fiegen", department: "Vendor Mgmt")
-Employee.create(name: "Marek Willing", department: "Business Development")
-Employee.create(name: "Marvin Becker", department: "Marketing")
+Employee.create(employeename: "Martin Nguyen", department: "Business Intelligence")
+Employee.create(employeename: "Anjuli Hesse", department: "HR")
+Employee.create(employeename: "Bianca Frost", department: "Business Intelligence")
+Employee.create(employeename: "Helge Petersen", department: "Ops Ex")
+Employee.create(employeename: "Steffen Christ", department: "C-Level")
+Employee.create(employeename: "Lea Krumland", department: "HR")
+Employee.create(employeename: "Sebastian Fiegen", department: "Vendor Mgmt")
+Employee.create(employeename: "Marek Willing", department: "Business Development")
+Employee.create(employeename: "Marvin Becker", department: "Marketing")
 
 puts "9x employees created"
 
