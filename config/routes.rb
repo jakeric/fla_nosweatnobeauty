@@ -11,7 +11,7 @@ Rails.application.routes.draw do
       get 'pages/about'
       resources :pages, only: [:new, :create, :show]
       resources :sports, only: [:index, :new, :create, :show]
-      resources :sportactions, only: [:new, :create, :destroy]
+      resources :sportactions, only: [:new, :create, :index ,:destroy]
       resources :employees, only: [:new, :create]
       # post 'prizes/index' => 'prizes#get_random_ticket'
       # post 'prizes/show' => 'prizes#save_ticket_to_prize'

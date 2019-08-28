@@ -19,7 +19,7 @@
         <div class="navbar-wagon-right hidden-xs hidden-sm">
 
           <% if user_signed_in? %>
-          <li> <%= link_to 'Create', pages_about_path, class: "navbar-wagon-item navbar-wagon-link" %></li>
+          <li> <%= link_to 'Menü', pages_about_path, class: "navbar-wagon-item navbar-wagon-link" %></li>
           <li> <%= link_to 'Ranking', ranking_path, class: "navbar-wagon-item navbar-wagon-link" %></li>
 
           <%= link_to "Logout", destroy_user_session_path, class: "navbar-wagon-item navbar-wagon-link",  :method => :delete %>

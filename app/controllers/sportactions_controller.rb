@@ -9,6 +9,10 @@ class SportactionsController < ApplicationController
     #end
   end
 
+  def index
+    @sportactions = Sportaction.all.order('sportactions.created_at DESC')
+  end
+
   def create
     current_user_id = current_user.id
     date = "#{action_params["datum(1i)"]}-#{action_params["datum(2i)"]}-#{action_params["datum(3i)"]}"
@@ -30,7 +34,8 @@ class SportactionsController < ApplicationController
 
   def destroy
     @sportaction = Sportaction.find(params[:id])
-    redirect_to ranking_path
+    @sportaction.destroy
+    redirect_to sportactions_path
   end
 
   def ranking

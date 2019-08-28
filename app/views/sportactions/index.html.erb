@@ -1,0 +1,16 @@
+<h1>All Sportactivities</h1>
+
+<% @sportactions.each do |sportaction| %>
+
+  <div class="card-product-list">
+
+    <div class="card-product-infos">
+      <h5> <%= sportaction.datum %> //<%= sportaction.employee.employeename%> // <%=  sportaction.sport.sportname  %> // <%= sportaction.sport.pointsperaction %> Punkte </h5>
+      <h5> created at: <%=  sportaction.created_at %> </h5>
+      <div>
+      <%= link_to 'Delete', sportaction, method: :delete %>
+      </div>
+    </div>
+  </div>
+
+<% end %>
