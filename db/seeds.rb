@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 puts "----------start----------"
 
-Action.destroy_all
+Sportaction.destroy_all
 Sport.destroy_all
 Employee.destroy_all
 User.destroy_all
@@ -41,13 +41,13 @@ Employee.create(employeename: "Marvin Becker", department: "Marketing")
 puts "9x employees created"
 
 35.times do
-  action = Action.new(
+  sportaction = Sportaction.new(
      datum: ['2019-08-01','2019-08-02','2019-08-03','2019-08-04'].sample,
      user_id: User.limit(1).first.id
     )
-  action.sport = Sport.limit(1).order("RANDOM()").first
-  action.employee = Employee.limit(1).order("RANDOM()").first
-  action.save!
+  sportaction.sport = Sport.limit(1).order("RANDOM()").first
+  sportaction.employee = Employee.limit(1).order("RANDOM()").first
+  sportaction.save!
 end
 
 puts "created 35 actions - yeah buddy!"

@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_many :actions
+  has_many :sportactions
   has_many :sports, :through => :actions
   has_many :employees, :through => :actions
   # Include default devise modules. Others available are:

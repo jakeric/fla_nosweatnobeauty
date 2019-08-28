@@ -9,8 +9,8 @@
 
             <div class="row">
               <div class="col-md-12">
-                <%= simple_form_for @action do |f| %>
-                <%= f.input :datum, label: 'Datum' %>
+                <%= simple_form_for @sportaction do |f| %>
+                <%= f.input :datum, as: :date , label: 'Datum' %>
               </div>
               <div class="col-md-6 col-xs-12">
                 <%= f.input :sport, as: :select, collection: @sports %>
@@ -20,17 +20,12 @@
                 <%= f.input :employee, label: 'Employee?',as: :select, collection: @employees %>
               </div>
 
-
-
               <div class="col-md-6 col-xs-12">
-                <div class="photo-input">
 
                   <%= f.button :submit %>
-                </div>
-
-
+                 <% end %>
               </div>
-              <% end %>
+
             </div>
           </div>
 

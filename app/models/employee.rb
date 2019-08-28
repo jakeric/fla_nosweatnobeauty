@@ -1,3 +1,3 @@
 class Employee < ApplicationRecord
-  has_many :actions
+  has_many :sportactions
 end
