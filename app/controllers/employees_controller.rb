@@ -1,6 +1,6 @@
 class EmployeesController < ApplicationController
   def new
-    # @array = ["Food", "Animal", "Unicorn", "Cartoon", "Classic", "Weird"]
+    @department_array = ['Business Intelligence','Brand & Communication','Business Development','CFO Staff','Engineering','Enterprise Apps & Infrastructure','Finance','Human Resources','International Strategy & New Markets','Office Management','Online Marketing','Operations','Private Label','Product','Sales & Merchandizing','Vendor Management']
     @employee = Employee.new
   end
 

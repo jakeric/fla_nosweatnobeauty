@@ -1,9 +1,10 @@
+<% @sports.each do |sport| %>
+    <div class="card-product">
 
-    <!-- <div class="row card-row"> -->
-      <% @sports.each do |sport| %>
-        <div class="col-xs-12 col-sm-4 col-md-3">
-            <p>Sport: <%= sport.sportname %> (<%= sport.pointsperaction %>) </p>
+        <div class="card-product-infos">
+            <h2><%= sport.sportname %> // Punkte: <%= sport.pointsperaction %> </h2>
         </div>
-      <% end %>
-    <!-- </div> -->
 
+    </div>
+
+<% end %>
